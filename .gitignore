@@ -12,3 +12,4 @@
 #build folders
 sim/build/
 flash/build/
+sim/obj_dir/
