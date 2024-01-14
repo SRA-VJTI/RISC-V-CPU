@@ -113,13 +113,14 @@ sim: $(BUILD_DIR)/$(TESTBENCH).vcd
 #----- Verilator -----
 
 # Simulate using Verilator
-TP_CPP_NAME = cpu_tb_cpp
-TP_CPP_FILE = $(TESTBENCH)/$(TP_CPP_NAME).cpp
+TP_CPP_NAME = cpu_tb
+TP_CPP_FILE = $(TB_DIR)/$(TP_CPP_NAME).cpp
 CPP_VCDS = cpu.vcd
+EXCLUDE_FILES = ../rtl/seven_seg.v
 
 # Verilator compilation
 obj_dir/V$(TOP_MODULE): $(TOP_MODULE_FILE) $(OTHER_MODULES) $(TP_CPP_FILE)
-	verilator --trace --cc --exe --build -j 0 -Wno-LATCH -Wno-COMBDLY -Wno-BLKANDNBLK -Wno-INITIALDLY -Wno-CASEINCOMPLETE -Wno-UNOPTFLAT -Wno-CASEOVERLAP -Wno-WIDTHTRUNC -Wno-WIDTHEXPAND $^
+	verilator --trace --cc --exe --build -j 0 -Wno-LATCH -Wno-COMBDLY -Wno-BLKANDNBLK -Wno-INITIALDLY -Wno-CASEINCOMPLETE -Wno-UNOPTFLAT -Wno-CASEOVERLAP -Wno-WIDTHTRUNC -Wno-WIDTHEXPAND $(filter-out $(EXCLUDE_FILES),$^)
 
 # Execute Verilator simulation
 $(CPP_VCDS): obj_dir/V$(TOP_MODULE) $(INSTRUCTIONS)
@@ -128,7 +129,7 @@ $(CPP_VCDS): obj_dir/V$(TOP_MODULE) $(INSTRUCTIONS)
 # Create waveform using gtkwave and Verilator
 .PHONY: waveform
 sim_verilator: $(CPP_VCDS) obj_dir/V$(TOP_MODULE)
-	gtkwave $(CPP_VCDS) --dark -a verilated_cpu.gtkw
+	gtkwave $(CPP_VCDS) -a verilated_cpu.gtkw
 
 .PHONY: clean
 clean: clean_program
