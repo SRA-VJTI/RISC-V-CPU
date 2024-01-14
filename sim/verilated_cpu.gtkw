@@ -36,41 +36,41 @@
 [markername] XX
 [markername] YY
 [markername] ZZ
-[treeopen] t2b_riscv_cpu.
-[treeopen] t2b_riscv_cpu.t2b_riscv_cpu.
-[treeopen] t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.
+[treeopen] top.
+[treeopen] top.top.
+[treeopen] top.top.rvsingle.
 [sst_width] 253
 [signals_width] 288
 [sst_expanded] 1
 [sst_vpaned_height] 159
 @28
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.clk
+top.top.rvsingle.clk
 @22
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.PC[31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.Instr[31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.rs1[4:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.rs2[4:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.rs1_value[31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.rs2_value[31:0]
+top.top.rvsingle.PC[31:0]
+top.top.Instr[31:0]
+top.top.rvsingle.b2v_inst4.rs1[4:0]
+top.top.rvsingle.b2v_inst4.rs2[4:0]
+top.top.rvsingle.b2v_inst4.rs1_value[31:0]
+top.top.rvsingle.b2v_inst4.rs2_value[31:0]
 @420
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst2.imm[31:0]
+top.top.rvsingle.b2v_inst2.imm[31:0]
 @22
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst2.final_output[31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.rd[31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.rd_value[31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.dmem.wr_addr[31:0]
+top.top.rvsingle.b2v_inst2.final_output[31:0]
+top.top.rvsingle.b2v_inst4.rd[31:0]
+top.top.rvsingle.b2v_inst4.rd_value[31:0]
+top.top.dmem.wr_addr[31:0]
 @421
-t2b_riscv_cpu.t2b_riscv_cpu.dmem.wr_data[31:0]
+top.top.dmem.wr_data[31:0]
 @22
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.register_file[2][31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.register_file[3][31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.register_file[5][31:0]
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst4.register_file[6][31:0]
+top.top.rvsingle.b2v_inst4.register_file[2][31:0]
+top.top.rvsingle.b2v_inst4.register_file[3][31:0]
+top.top.rvsingle.b2v_inst4.register_file[5][31:0]
+top.top.rvsingle.b2v_inst4.register_file[6][31:0]
 @28
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst.j_signal
+top.top.rvsingle.b2v_inst.j_signal
 @22
-t2b_riscv_cpu.t2b_riscv_cpu.rvsingle.b2v_inst.jump[31:0]
+top.top.rvsingle.b2v_inst.jump[31:0]
 @28
-t2b_riscv_cpu.t2b_riscv_cpu.dmem.wr_en
+top.top.dmem.wr_en
 [pattern_trace] 1
 [pattern_trace] 0
