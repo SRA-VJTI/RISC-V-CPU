@@ -8,3 +8,7 @@
 #verilog build files
 *.vcd
 *.vvp
+
+#build folders
+sim/build/
+flash/build/

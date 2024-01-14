@@ -108,7 +108,7 @@ $(BUILD_DIR)/$(TESTBENCH).vcd: $(BUILD_DIR)/$(TESTBENCH).vvp $(INSTRUCTIONS)
 # Create waveform using gtkwave and iverilog
 .PHONY: sim
 sim: $(BUILD_DIR)/$(TESTBENCH).vcd
-	gtkwave $^ --dark -a work_dir.gtkw
+	gtkwave $^ -a work_dir.gtkw
 
 #----- Verilator -----
 
